@@ -1,0 +1,1 @@
+python3 learning3d/data_utils/download_data.py

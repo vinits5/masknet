@@ -35,9 +35,9 @@ Source Code Author: Vinit Sarode
 > cd evaluation && chmod +x evaluate.sh && ./evaluate.sh
 
 ### Tests with 3D-Match:
-> python download_3dmatch.py
-> python test_3DMatch.py
-> python plot_figures.py
+> python download_3dmatch.py\
+> python test_3DMatch.py\
+> python plot_figures.py\
 > python make_video.py
 
 ### Results of 3DMatch Dataset:

@@ -1,0 +1,7 @@
+*__pycache__
+learning3d/data/
+checkpoints/
+evaluation/testdata*
+evaluation/results*
+3dmatch/images/
+3dmatch/3dmatch_results*
