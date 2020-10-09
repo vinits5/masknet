@@ -19,14 +19,6 @@ This work is accepted at the 8th International Conference on 3D Vision.
 	<img src="https://github.com/vinits5/masknet/blob/main/images/network.png" height="300">
 </p>
 
-### Requirements:
-1. pytorch==1.3.0+cu92
-2. transforms3d==0.3.1
-3. h5py==2.9.0
-4. open3d==0.7.0.0
-5. ninja==1.9.0.post1
-6. tensorboardX=1.8
-
 ### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
 Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.
 
@@ -45,12 +37,20 @@ Learning3D is our open-source library that supports the development of deep lear
 
 ## Use of Code
 
+### Requirements:
+1. pytorch==1.3.0+cu92
+2. transforms3d==0.3.1
+3. h5py==2.9.0
+4. open3d==0.7.0.0
+5. ninja==1.9.0.post1
+6. tensorboardX=1.8
+
 ### Dataset:
 > ./learning3d/data_utils/download_data.sh
 
 ### Train MaskNet:
-> conda create -n masknet python=3.7
-> pip install -r requirements.txt
+> conda create -n masknet python=3.7\
+> pip install -r requirements.txt\
 > python train.py
 
 ### Test MaskNet:
