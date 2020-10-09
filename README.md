@@ -42,11 +42,11 @@ Source Code Author: Vinit Sarode
 
 ### Results of 3DMatch Dataset:
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/3.gif" height="100">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/4.gif" height="100">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/3.gif" height="200">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/4.gif" height="200">
 </p>
 
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/1.gif" height="100">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/2.gif" height="100">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/1.gif" height="200">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/2.gif" height="200">
 </p>
