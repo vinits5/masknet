@@ -4,12 +4,12 @@ Source Code Author: Vinit Sarode
 
 ### Binary mask prediction using MaskNet:
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/master/images/approach.gif" height="300">
+	<img src="https://github.com/vinits5/masknet/tree/main/images/approach.gif" height="300">
 </p>
 
 ### Network Architecture:
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/master/images/network.png" height="300">
+	<img src="https://github.com/vinits5/masknet/tree/main/images/network.png" height="300">
 </p>
 
 ### Requirements:
@@ -42,11 +42,11 @@ Source Code Author: Vinit Sarode
 
 ### Results of 3DMatch Dataset:
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/master/images/3.gif" height="300">
-	<img src="https://github.com/vinits5/masknet/blob/master/images/4.gif" height="300">
+	<img src="https://github.com/vinits5/masknet/tree/main/images/3.gif" height="300">
+	<img src="https://github.com/vinits5/masknet/tree/main/images/4.gif" height="300">
 </p>
 
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/master/images/1.gif" height="300">
-	<img src="https://github.com/vinits5/masknet/blob/master/images/2.gif" height="300">
+	<img src="https://github.com/vinits5/masknet/tree/main/images/1.gif" height="300">
+	<img src="https://github.com/vinits5/masknet/tree/main/images/2.gif" height="300">
 </p>
