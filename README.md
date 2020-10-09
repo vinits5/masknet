@@ -1,17 +1,13 @@
 # MaskNet: A Fully-Convolutional Network to Estimate Inlier Points
+[**Paper**]() | [**Website**]() | [**Video**]() | [**Biorobotics Lab's Project Webpage**](http://biorobotics.ri.cmu.edu/research/ml_registration.php)
 
 Source Code Author: Vinit Sarode
 
-This work is accepted at the 8th International Conference on 3D Vision.
+This work is accepted at the 8th International Conference on 3D Vision, 2020.
 
 ### Binary mask prediction using MaskNet:
 <p align="center">
 	<img src="https://github.com/vinits5/masknet/blob/main/images/approach.gif" height="300">
-</p>
-
-### Applications:
-<p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/applications.png" height="200">
 </p>
 
 ### Network Architecture:
@@ -19,10 +15,10 @@ This work is accepted at the 8th International Conference on 3D Vision.
 	<img src="https://github.com/vinits5/masknet/blob/main/images/network.png" height="300">
 </p>
 
-### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
-Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.
-
-[CODE](https://github.com/vinits5/learning3d) | [DOCUMENTATION](https://medium.com/@vinitsarode5/learning3d-a-modern-library-for-deep-learning-on-3d-point-clouds-data-48adc1fd3e0?sk=0beb59651e5ce980243bcdfbf0859b7a) | [DEMO](https://github.com/vinits5/learning3d/blob/master/examples/test_pointnet.py)
+### Applications:
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/applications.png" height="200">
+</p>
 
 ### Results of 3DMatch Dataset:
 <p align="center">
@@ -34,6 +30,11 @@ Learning3D is our open-source library that supports the development of deep lear
 	<img src="https://github.com/vinits5/masknet/blob/main/images/1.gif" height="200">
 	<img src="https://github.com/vinits5/masknet/blob/main/images/2.gif" height="200">
 </p>
+
+### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
+Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.
+
+[CODE](https://github.com/vinits5/learning3d) | [DOCUMENTATION](https://medium.com/@vinitsarode5/learning3d-a-modern-library-for-deep-learning-on-3d-point-clouds-data-48adc1fd3e0?sk=0beb59651e5ce980243bcdfbf0859b7a) | [DEMO](https://github.com/vinits5/learning3d/blob/master/examples/test_pointnet.py)
 
 ## Use of Code
 
