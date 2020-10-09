@@ -3,7 +3,7 @@
 
 Source Code Author: Vinit Sarode
 
-This work is accepted at the 8th International Conference on 3D Vision, 2020.
+*[Note: This work is accepted at the 8th International Conference on 3D Vision, 2020.]*
 
 ### Binary mask prediction using MaskNet:
 <p align="center">
