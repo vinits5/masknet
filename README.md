@@ -11,9 +11,7 @@ This work is accepted at the 8th International Conference on 3D Vision.
 
 ### Applications:
 <p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/inlier_detection.png" height="150">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/alignment.png" height="150">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/denoising.png" height="150">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/applications.png" height="300">
 </p>
 
 ### Network Architecture:
