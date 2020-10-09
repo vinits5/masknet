@@ -2,9 +2,18 @@
 
 Source Code Author: Vinit Sarode
 
+This work is accepted at the 8th International Conference on 3D Vision.
+
 ### Binary mask prediction using MaskNet:
 <p align="center">
 	<img src="https://github.com/vinits5/masknet/blob/main/images/approach.gif" height="300">
+</p>
+
+### Applications:
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/inlier_detection.png" height="150">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/alignment.png" height="150">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/denoising.png" height="150">
 </p>
 
 ### Network Architecture:
@@ -19,6 +28,24 @@ Source Code Author: Vinit Sarode
 4. open3d==0.7.0.0
 5. ninja==1.9.0.post1
 6. tensorboardX=1.8
+
+### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
+Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.
+
+[CODE](https://github.com/vinits5/learning3d) | [DOCUMENTATION](https://medium.com/@vinitsarode5/learning3d-a-modern-library-for-deep-learning-on-3d-point-clouds-data-48adc1fd3e0?sk=0beb59651e5ce980243bcdfbf0859b7a) | [DEMO](https://github.com/vinits5/learning3d/blob/master/examples/test_pointnet.py)
+
+### Results of 3DMatch Dataset:
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/3.gif" height="200">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/4.gif" height="200">
+</p>
+
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/1.gif" height="200">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/2.gif" height="200">
+</p>
+
+## Use of Code
 
 ### Dataset:
 > ./learning3d/data_utils/download_data.sh
@@ -48,24 +75,8 @@ We provide a number of registration algorithms with MaskNet as listed below:
 > python plot_figures.py\
 > python make_video.py
 
-### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
-Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.
-
-[CODE](https://github.com/vinits5/learning3d) | [DOCUMENTATION](https://medium.com/@vinitsarode5/learning3d-a-modern-library-for-deep-learning-on-3d-point-clouds-data-48adc1fd3e0?sk=0beb59651e5ce980243bcdfbf0859b7a) | [DEMO](https://github.com/vinits5/learning3d/blob/master/examples/test_pointnet.py)
-
-### Results of 3DMatch Dataset:
-<p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/3.gif" height="200">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/4.gif" height="200">
-</p>
-
-<p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/1.gif" height="200">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/2.gif" height="200">
-</p>
-
 ### License
 MIT License
 
 
-We like to thank the authors of [PRNet](https://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf), [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) for sharing their codes.
+We would like to thank the authors of [PRNet](https://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf), [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) for sharing their codes.
