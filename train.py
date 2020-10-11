@@ -44,7 +44,7 @@ class IOStream:
 	def close(self):
 		self.f.close()
 
-def test_one_epoch(args, model, pnlk, test_loader):
+def test_one_epoch(args, model, test_loader):
 	model.eval()
 	test_loss = 0.0
 	pred  = 0.0
@@ -149,6 +149,7 @@ def options():
 	parser = argparse.ArgumentParser(description='MaskNet: A Fully-Convolutional Network For Inlier Estimation (Training)')
 	parser.add_argument('--exp_name', type=str, default='exp_masknet', metavar='N',
 						help='Name of the experiment')
+	parser.add_argument('--eval', type=bool, default=False, help='Train or Evaluate the network.')
 	
 	# settings for input data
 	parser.add_argument('--num_points', default=1024, type=int,
@@ -166,7 +167,7 @@ def options():
 						metavar='N', help='number of data loading workers (default: 4)')
 	parser.add_argument('-b', '--batch_size', default=32, type=int,
 						metavar='N', help='mini-batch size (default: 32)')
-	parser.add_argument('-b', '--test_batch_size', default=8, type=int,
+	parser.add_argument('--test_batch_size', default=8, type=int,
 						metavar='N', help='test-mini-batch size (default: 8)')
 	parser.add_argument('--unseen', default=False, type=bool,
 						help='Use first 20 categories for training and last 20 for testing')

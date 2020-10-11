@@ -35,9 +35,10 @@ class PointNetMask(nn.Module):
 
 
 class MaskNet(nn.Module):
-	def __init__(self, feature_model=PointNet(use_bn=True)):
+	def __init__(self, feature_model=PointNet(use_bn=True), is_training=True):
 		super().__init__()
 		self.maskNet = PointNetMask(feature_model=feature_model)
+		self.is_training = is_training
 
 	@staticmethod
 	def index_points(points, idx):
@@ -67,7 +68,7 @@ class MaskNet(nn.Module):
 	def forward(self, template, source, point_selection='threshold'):
 		mask = self.maskNet(template, source)
 
-		if point_selection == 'topk':
+		if point_selection == 'topk' or self.is_training:
 			_, self.mask_idx = torch.topk(mask, source.shape[1], dim=1, sorted=False)
 		elif point_selection == 'threshold':
 			self.mask_idx = self.find_index(mask)
