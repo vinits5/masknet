@@ -382,8 +382,8 @@ class UserData:
 	def __init__(self, template, source, mask=None, igt=None):
 		self.template = template
 		self.source = source
-		if mask is not None: self.mask = mask
-		if igt is not None: self.igt = igt
+		self.mask = mask
+		self.igt = igt
 		self.check_dataset()
 
 	def check_dataset(self):

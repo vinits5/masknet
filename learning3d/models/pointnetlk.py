@@ -119,6 +119,16 @@ class PointNetLK(nn.Module):
 
 		self.last_err = None
 		pinv = self.compute_inverse_jacobian(J, template_features, source)
+		if pinv == {}:
+			print("Error raised while computing jacobian! Do check inputs!")
+			result = {'est_R': est_T[:,0:3,0:3],
+					  'est_t': est_T[:,0:3,3],
+					  'est_T': est_T,
+					  'r': None,
+					  'transformed_source': self.transform(est_T.unsqueeze(1), source),
+					  'itr': 1,
+					  'est_T_series': self.est_T_series}
+			return result
 
 		itr = 0
 		r = None
@@ -198,11 +208,11 @@ class PointNetLK(nn.Module):
 		except RuntimeError as err:
 			
 			self.last_err = err
-			g = torch.eye(4).to(p0).view(1, 4, 4).expand(p0.size(0), 4, 4).contiguous()
+			g = torch.eye(4).to(source).view(1, 4, 4).expand(source.size(0), 4, 4).contiguous()
 			
 			source_features = self.ptnet(source) # [B, N, 3] -> [B, K]
 			r = source_features - template_features
-			self.ptnet.train(training)
+			self.ptnet.train(self.ptnet.training)
 			return {}
 
 	def handle_batchNorm(self, template, source):

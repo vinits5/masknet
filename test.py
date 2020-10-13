@@ -153,13 +153,12 @@ def main():
 	torch.backends.cudnn.deterministic = True
 
 	if args.user_data:
-		template = np.zeros((1, 100, 3))					# Define/Read template point cloud.
-		source = np.zeros((1, 75, 3))						# Define/Read source point cloud.
-		mask = np.zeros((1, 100, 1))						# Define/Read mask for point cloud. [Not mandatory in testing]
-		igt = np.zeros((1, 4, 4))							# Define/Read igt transformation. [Not mandatory during testing]
-		testset = UserData(template=template, source=source, mask=None, igt=None)
-		
-	if args.any_data:
+		template = np.random.randn(1, 100, 3)					# Define/Read template point cloud.
+		source = np.random.randn(1, 75, 3)						# Define/Read source point cloud.
+		mask = np.zeros((1, 100, 1))							# Define/Read mask for point cloud. [Not mandatory in testing]
+		igt = np.zeros((1, 4, 4))								# Define/Read igt transformation. [Not mandatory during testing]
+		testset = UserData(template=template, source=source, mask=None, igt=None)	
+	elif args.any_data:
 		# Read Stanford bunny's point cloud.
 		bunny_path = os.path.join('learning3d/data/bunny/reconstruction/bun_zipper.ply')
 		if not os.path.exists(bunny_path): 
