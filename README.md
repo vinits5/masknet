@@ -12,7 +12,7 @@ Source Code Author: Vinit Sarode
 
 In this work, MaskNet estimates inliers (shown on the right in blue) for a given pair of point clouds (shown on the left). MaskNet finds a Boolean vector mask that only retains inlier points from point cloud in red which most closely approximate the shape of the point cloud in green.
 
-We call our method MaskNet as the network learns to 'mask-out' outliers from template (shown in red) point cloud. We demonstrate the efficiency MaskNet as a pre-processing step in various applications (as shown below). MaskNet shows remarkable generalization within and across datasets without the need for additional fine-tuning.
+We call our method MaskNet as the network learns to 'mask-out' outliers from template (shown in red) point cloud. We demonstrate the efficiency of MaskNet as a pre-processing step in various applications (as shown below). MaskNet shows remarkable generalization within and across datasets without the need for additional fine-tuning.
 
 ### Applications:
 <p align="center">
@@ -31,7 +31,7 @@ We call our method MaskNet as the network learns to 'mask-out' outliers from tem
 </p>
 
 ### Citation:
-We will soon release the paper.
+We will soon release it.
 > 
 
 ### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
