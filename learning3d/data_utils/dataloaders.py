@@ -300,59 +300,6 @@ class SceneflowDataset(Dataset):
 	def __len__(self):
 		return len(self.datapath)
 
-class KittiDataset:
-	def __init__(self, folder, mask=False, train=False, igt_as_matrix=False):
-		self.template, self.source, self.R, self.t = self.read_data(folder)
-		len_data = int(0.9*self.template.shape[0])
-		self.mask = mask
-		self.igt_as_matrix = igt_as_matrix
-		if train:
-			self.template = self.template[0:len_data]
-			self.source = self.source[0:len_data]
-			self.R = self.R[0:len_data]
-			self.t = self.t[0:len_data]
-		else:
-			self.template = self.template[len_data:]
-			self.source = self.source[len_data:]
-			self.R = self.R[len_data:]
-			self.t = self.t[len_data:]
-
-	def __len__(self):
-		return self.template.shape[0]
-
-	def read_data(self, folder):
-		BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-		DATA_DIR = os.path.join(BASE_DIR, os.pardir, 'data')
-		allfiles = [os.path.join(DATA_DIR, folder, x) for x in os.listdir(os.path.join(DATA_DIR, folder))]
-		template, source, R, t = [], [], [], []
-		for file_path in allfiles:
-			file = h5py.File(file_path, 'r')
-			template.append(np.array(file['template']))
-			source.append(np.array(file['source']))
-			R.append(np.array(file['R']))
-			t.append(np.array(file['t']))
-		return np.concatenate(template), np.concatenate(source), np.concatenate(R), np.concatenate(t)
-
-	def __getitem__(self, index):
-		p0 = self.template[index]
-		p1 = self.source[index]
-
-		# Return igt as [4,4] transformation matrix.
-		if self.igt_as_matrix:
-			igt = np.eye(4)
-			igt[0:3, 0:3] = self.R[index]
-			igt[0:3, 3] = self.t[index]
-		else:											# or return igt as [1,7] quaternion.
-			R_ = self.R[index]
-			t_ = self.t[index]
-			quat = -t3d.mat2quat(R_)
-			igt = np.array([quat[0], quat[1], quat[2], quat[3], t_[0], t_[1], t_[2]])
-			igt = igt.reshape(1,-1)
-
-		if self.mask:
-			return torch.tensor(p0, dtype=torch.float32), torch.tensor(p1, dtype=torch.float32), torch.tensor(igt, dtype=torch.float32), torch.zeros(p0.shape[0])
-		return torch.tensor(p0, dtype=torch.float32), torch.tensor(p1, dtype=torch.float32), torch.tensor(igt, dtype=torch.float32)
-
 class AnyData:
 	def __init__(self, pc, mask=False, repeat=1000):
 		# pc:			Give any point cloud [N, 3] (ndarray)

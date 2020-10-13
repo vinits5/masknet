@@ -10,10 +10,9 @@ Source Code Author: Vinit Sarode
 	<img src="https://github.com/vinits5/masknet/blob/main/images/approach.gif" height="300">
 </p>
 
-### Network Architecture:
-<p align="center">
-	<img src="https://github.com/vinits5/masknet/blob/main/images/network.png" height="300">
-</p>
+In this work, MaskNet estimates inliers (shown on the right in blue) for a given pair of point clouds (shown on the left). MaskNet finds a Boolean vector mask that only retains inlier points from point cloud in red which most closely approximate the shape of the point cloud in green.
+
+We call our method MaskNet as the network learns to 'mask-out' outliers from template (shown in red) point cloud. We demonstrate the efficiency MaskNet as a pre-processing step in various applications (as shown below). MaskNet shows remarkable generalization within and across datasets without the need for additional fine-tuning.
 
 ### Applications:
 <p align="center">
@@ -31,13 +30,22 @@ Source Code Author: Vinit Sarode
 	<img src="https://github.com/vinits5/masknet/blob/main/images/2.gif" height="200">
 </p>
 
+### Citation:
+We will soon release the paper.
+> 
+
 ### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
 Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.\
 *[Note: We have used learning3d library while implementing MaskNet. Feel free to refer to following references.]*
 
 [**Code**](https://github.com/vinits5/learning3d) | [**Documentation**](https://medium.com/@vinitsarode5/learning3d-a-modern-library-for-deep-learning-on-3d-point-clouds-data-48adc1fd3e0?sk=0beb59651e5ce980243bcdfbf0859b7a) | [**Demo**](https://github.com/vinits5/learning3d/blob/master/examples/test_pointnet.py)
 
-## Use of Code
+## Usage
+
+### Network Architecture:
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/network.png" height="300">
+</p>
 
 ### Requirements:
 1. pytorch==1.3.0+cu92
@@ -56,7 +64,7 @@ Learning3D is our open-source library that supports the development of deep lear
 > python train.py
 
 ### Test MaskNet:
-> python test.py --pretrained checkpoints/exp_masknet/models/best_model.t7 --reg_algorithm 'pointnetlk'\
+> python test.py --pretrained checkpoints/exp_masknet/models/best_model.t7 --reg_algorithm 'pointnetlk'
 
 We provide a number of registration algorithms with MaskNet as listed below:
 1. PointNetLK
@@ -65,6 +73,10 @@ We provide a number of registration algorithms with MaskNet as listed below:
 4. PRNet
 5. PCRNet
 6. RPMNet
+
+### Test MaskNet with Your Own Data:
+In the test.py file, change the template and source variables with your data on line number 156 and 157. Ground truth values for mask and transformation between template and source can be provided by changing the variables on line no. 158 and 159 resp. 
+> python test.py --user_data True --reg_algorithm 'pointnetlk'
 
 ### Statistical Results:
 > cd evaluation && chmod +x evaluate.sh && ./evaluate.sh
@@ -76,7 +88,7 @@ We provide a number of registration algorithms with MaskNet as listed below:
 > python make_video.py
 
 ### License
-MIT License
+This project is release under the MIT License.
 
 
 We would like to thank the authors of [PRNet](https://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf), [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) for sharing their codes.

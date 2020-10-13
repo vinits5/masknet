@@ -153,8 +153,8 @@ def main():
 	torch.backends.cudnn.deterministic = True
 
 	if args.user_data:
-		template = np.random.randn(1, 100, 3)					# Define/Read template point cloud.
-		source = np.random.randn(1, 75, 3)						# Define/Read source point cloud.
+		template = np.random.randn(1, 100, 3)					# Define/Read template point cloud. [Shape: BATCH x No. of Points x 3]
+		source = np.random.randn(1, 75, 3)						# Define/Read source point cloud. [Shape: BATCH x No. of Points x 3]
 		mask = np.zeros((1, 100, 1))							# Define/Read mask for point cloud. [Not mandatory in testing]
 		igt = np.zeros((1, 4, 4))								# Define/Read igt transformation. [Not mandatory during testing]
 		testset = UserData(template=template, source=source, mask=None, igt=None)	
