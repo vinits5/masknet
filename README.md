@@ -91,4 +91,4 @@ In the test.py file, change the template and source variables with your data on 
 This project is release under the MIT License.
 
 
-We would like to thank the authors of [PRNet](https://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf), [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) for sharing their codes.
+We would like to thank the authors of [PointNet](http://stanford.edu/~rqi/pointnet/), [PRNet](https://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf), [RPM-Net](https://arxiv.org/abs/2003.13479) and [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) for sharing their codes.
