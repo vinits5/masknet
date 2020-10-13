@@ -92,3 +92,26 @@ This project is release under the MIT License.
 
 
 We would like to thank the authors of [PointNet](http://stanford.edu/~rqi/pointnet/), [PRNet](https://papers.nips.cc/paper/9085-prnet-self-supervised-learning-for-partial-to-partial-registration.pdf), [RPM-Net](https://arxiv.org/abs/2003.13479) and [PointNetLK](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aoki_PointNetLK_Robust__Efficient_Point_Cloud_Registration_Using_PointNet_CVPR_2019_paper.pdf) for sharing their codes.
+
+
+## Additional Results:
+
+**3D-Match Dataset Results:**
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/3dmatch_results.gif" height="300">
+</p>
+
+**Iterative registration with MaskNet:**
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/iterations_registration.png" height="300">
+</p>
+
+**MaskNet's Sensitivity to Noise:**
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/noise_sensitivity.png" height="300">
+</p>
+
+**Point Cloud Denoising:**
+<p align="center">
+	<img src="https://github.com/vinits5/masknet/blob/main/images/denoising.png" height="300">
+</p>
