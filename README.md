@@ -31,8 +31,16 @@ We call our method MaskNet as the network learns to 'mask-out' outliers from tem
 </p>
 
 ### Citation:
-We will soon release it.
-> 
+```
+@misc{sarode2020masknet,
+      title={MaskNet: A Fully-Convolutional Network to Estimate Inlier Points}, 
+      author={Vinit Sarode and Animesh Dhagat and Rangaprasad Arun Srivatsan and Nicolas Zevallos and Simon Lucey and Howie Choset},
+      year={2020},
+      eprint={2010.09185},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
 ### Learning3D: A Modern Library for Deep Learning on 3D Point Clouds Data
 Learning3D is our open-source library that supports the development of deep learning algorithms that deal with 3D data. The Learning3D exposes a set of state of art deep neural networks in python. A modular code has been provided for further development. We welcome contributions from the open-source community.\
