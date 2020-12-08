@@ -1,5 +1,5 @@
 # MaskNet: A Fully-Convolutional Network to Estimate Inlier Points
-[**Paper**](https://arxiv.org/abs/2010.09185) | [**Website**]() | [**Video**]() | [**Biorobotics Lab's Project Webpage**](http://biorobotics.ri.cmu.edu/research/ml_registration.php)
+[**Paper**](https://arxiv.org/abs/2010.09185) | [**Website**]() | [**Video**](https://youtu.be/sOubGRB17D4) | [**Biorobotics Lab's Project Webpage**](http://biorobotics.ri.cmu.edu/research/ml_registration.php)
 
 Source Code Author: Vinit Sarode
 
